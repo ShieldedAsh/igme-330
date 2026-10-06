@@ -1,9 +1,73 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-  </head>
-  <body>
-    Hello, World!
-    test
-  </body>
+
+<head>
+  <title>
+  </title>
+</head>
+
+<body>
+  <canvas></canvas>
+
+  <script>
+    const canvas = document.querySelector("canvas");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const ctx = canvas.getContext("2d");
+
+    class Circle {
+      constructor(location, radius, growthRate) {
+        this.location = location;
+        this.radius = radius;
+        this.growthRate = growthRate;
+      }
+
+      update(now) {
+        let nowS = now / 1000;
+        let timeAdj = nowS / this.growthRate;
+        let radius = Math.abs(Math.sin(timeAdj)) * 273.4554;
+        this.radius = radius
+      }
+
+      draw(ctx) {
+        ctx.save();
+
+        ctx.beginPath();
+        ctx.arc(...this.location, this.radius, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.restore();
+      }
+    }
+
+    let circles = [
+      new Circle([100, 100], 10, 10),
+      new Circle([200, 100], 10, 5),
+      new Circle([200, 200], 10, 20)
+    ];
+
+    //draw circle
+
+    const frame = (lastFrameTime) => {
+      let now = performance.now();
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let c of circles) {
+        c.update(now);
+      }
+
+      for (let c of circles) {
+        c.draw(ctx);
+      }
+
+      requestAnimationFrame(frame);
+    };
+
+    frame();
+
+  </Script>
+</body>
+
 </html>
