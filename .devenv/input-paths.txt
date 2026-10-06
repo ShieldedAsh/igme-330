@@ -1,0 +1,11 @@
+/home/ash/.config/nixpkgs/overlays
+/home/ash/.config/nixpkgs/overlays.nix
+/home/ash/dev/rit/330/.devenv/bootstrap/bootstrapLib.nix
+/home/ash/dev/rit/330/.devenv/bootstrap/default.nix
+/home/ash/dev/rit/330/.devenv/bootstrap/resolve-lock.nix
+/home/ash/dev/rit/330/.env
+/home/ash/dev/rit/330/devenv.local.nix
+/home/ash/dev/rit/330/devenv.lock
+/home/ash/dev/rit/330/devenv.nix
+/home/ash/dev/rit/330/devenv.yaml
+/run/user/1000/devenv-b6021ef/processes/native-manager.pid
