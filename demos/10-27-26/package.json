@@ -1,0 +1,16 @@
+{
+  "name": "demo_for_330",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Vinny Keeler (vinny@shash.dev)",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cowrizz": "^1.0.4"
+  }
+}

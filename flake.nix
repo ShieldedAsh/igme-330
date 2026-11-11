@@ -20,7 +20,7 @@
       {
         devShells.default = pkgs.mkShell {
           packages = [
-            pkgs.nodejs_22
+            pkgs.nodejs_24
             pkgs.vscode-langservers-extracted
             pkgs.superhtml
             pkgs.typescript-language-server
